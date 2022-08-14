@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EA0795028A8EF25003BF63B /* AudioProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA0794F28A8EF25003BF63B /* AudioProcessing.swift */; };
+		1EA0795228A903EC003BF63B /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1EA0795128A903EC003BF63B /* music.mp3 */; };
 		1ED4BC9C28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BC9B28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift */; };
 		1ED4BC9E28A80F9800689911 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BC9D28A80F9800689911 /* ContentView.swift */; };
 		1ED4BCA028A80F9A00689911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4BC9F28A80F9A00689911 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EA0794F28A8EF25003BF63B /* AudioProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProcessing.swift; sourceTree = "<group>"; };
+		1EA0795128A903EC003BF63B /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		1ED4BC9828A80F9800689911 /* SwiftChartsAudioVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftChartsAudioVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4BC9B28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftChartsAudioVisualizerApp.swift; sourceTree = "<group>"; };
 		1ED4BC9D28A80F9800689911 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				1ED4BC9B28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift */,
 				1ED4BC9D28A80F9800689911 /* ContentView.swift */,
+				1EA0794F28A8EF25003BF63B /* AudioProcessing.swift */,
+				1EA0795128A903EC003BF63B /* music.mp3 */,
 				1ED4BC9F28A80F9A00689911 /* Assets.xcassets */,
 				1ED4BCA128A80F9A00689911 /* Preview Content */,
 			);
@@ -233,6 +239,7 @@
 			files = (
 				1ED4BCA328A80F9A00689911 /* Preview Assets.xcassets in Resources */,
 				1ED4BCA028A80F9A00689911 /* Assets.xcassets in Resources */,
+				1EA0795228A903EC003BF63B /* music.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED4BC9E28A80F9800689911 /* ContentView.swift in Sources */,
+				1EA0795028A8EF25003BF63B /* AudioProcessing.swift in Sources */,
 				1ED4BC9C28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +433,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,6 +441,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.songpark.SwiftChartsAudioVisualizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,6 +466,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,6 +474,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.songpark.SwiftChartsAudioVisualizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
