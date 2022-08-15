@@ -22,14 +22,16 @@ struct ContentView: View {
     @State var isPlaying = false
     @State var data: [Float] = Array(repeating: 0, count: Constants.barAmount)
         .map { _ in Float.random(in: 1...Constants.magnitudeLimit) }
+    @State var playerProgress: Double = 0.0
+    
+    let timer = Timer.publish(
+        every: Constants.updateInterval,
+        on: .main,
+        in: .common
+    ).autoconnect()
+    
     
     var body: some View {
-        let timer = Timer.publish(
-            every: Constants.updateInterval,
-            on: .main,
-            in: .common
-        ).autoconnect()
-        
         VStack {
             Spacer()
             
@@ -77,7 +79,7 @@ struct ContentView: View {
     
     var playerControls: some View {
         Group {
-            ProgressView(value: 0.4)
+            ProgressView(value: playerProgress)
                 .tint(.secondary)
             
             Text("Fantaisie - Impromptu, Op. 66")
@@ -120,7 +122,7 @@ struct ContentView: View {
     
     func playButtonTapped() {
         if isPlaying {
-            audioProcessing.player.stop()
+            audioProcessing.player.pause()
         } else {
             audioProcessing.player.play()
         }
@@ -133,6 +135,8 @@ struct ContentView: View {
                 data = audioProcessing.fftMagnitudes.map {
                     min($0, Constants.magnitudeLimit)
                 }
+                print("player progress: \(audioProcessing.currentProgress)")
+                playerProgress = audioProcessing.currentProgress
             }
         }
     }

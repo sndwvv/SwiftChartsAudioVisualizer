@@ -18,6 +18,7 @@ import Accelerate
  consider using something more robust, like the [AudioKit](https://audiokit.io/) framework.
  */
 class AudioProcessing {
+    
     static var shared: AudioProcessing = .init()
     
     private let engine = AVAudioEngine()
@@ -25,6 +26,8 @@ class AudioProcessing {
     
     let player = AVAudioPlayerNode()
     var fftMagnitudes: [Float] = []
+    
+    var duration: TimeInterval = 0
     
     init() {
         _ = engine.mainMixerNode
@@ -35,6 +38,9 @@ class AudioProcessing {
         let audioFile = try! AVAudioFile(
             forReading: Bundle.main.url(forResource: "music", withExtension: "mp3")!
         )
+        
+        print("audio duration: \(audioFile.duration)")
+        duration = audioFile.duration
         
         let format = audioFile.processingFormat
             
@@ -86,4 +92,38 @@ class AudioProcessing {
             
         return normalizedMagnitudes
     }
+    
+    var currentProgress: Double {
+        let progress = player.current / duration
+        if progress < 0 {
+            return 0
+        } else {
+            let roundedValue = round(progress * 1000) / 1000.0
+            return roundedValue
+        }
+    }
+    
+}
+
+
+extension AVAudioFile {
+
+    var duration: TimeInterval {
+        let sampleRateSong = Double(processingFormat.sampleRate)
+        let lengthSongSeconds = Double(length) / sampleRateSong
+        return lengthSongSeconds
+    }
+
+}
+
+
+extension AVAudioPlayerNode {
+
+    var current: TimeInterval {
+        if let nodeTime = lastRenderTime, let playerTime = playerTime(forNodeTime: nodeTime) {
+            return Double(playerTime.sampleTime) / playerTime.sampleRate
+        }
+        return 0
+    }
+
 }
