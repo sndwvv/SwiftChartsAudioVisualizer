@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftChartsAudioVisualizerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TrackDetailsView(viewModel: TrackDetailsViewModel.example())
         }
     }
 }

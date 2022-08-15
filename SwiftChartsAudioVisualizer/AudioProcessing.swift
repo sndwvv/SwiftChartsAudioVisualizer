@@ -19,8 +19,6 @@ import Accelerate
  */
 class AudioProcessing {
     
-    static var shared: AudioProcessing = .init()
-    
     private let engine = AVAudioEngine()
     private let bufferSize = 1024
     
@@ -29,14 +27,15 @@ class AudioProcessing {
     
     var duration: TimeInterval = 0
     
-    init() {
+    init(fileName: String) {
+        
         _ = engine.mainMixerNode
         
         engine.prepare()
         try! engine.start()
         
         let audioFile = try! AVAudioFile(
-            forReading: Bundle.main.url(forResource: "music", withExtension: "mp3")!
+            forReading: Bundle.main.url(forResource: fileName, withExtension: "mp3")!
         )
         
         print("audio duration: \(audioFile.duration)")
@@ -93,7 +92,7 @@ class AudioProcessing {
         return normalizedMagnitudes
     }
     
-    var currentProgress: Double {
+    var playerProgress: Double {
         let progress = player.current / duration
         if progress < 0 {
             return 0
@@ -101,6 +100,15 @@ class AudioProcessing {
             let roundedValue = round(progress * 1000) / 1000.0
             return roundedValue
         }
+    }
+    
+    var playerCurrentTimeString: String {
+        let current = player.current
+        return DateComponentsFormatter().string(from: current) ?? ""
+    }
+    
+    var playerDurationTimeString: String {
+        return DateComponentsFormatter().string(from: duration) ?? ""
     }
     
 }
