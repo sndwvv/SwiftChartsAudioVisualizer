@@ -21,7 +21,7 @@ class TrackDetailsViewModel: ObservableObject {
     }
     
     static func example() -> TrackDetailsViewModel {
-        return TrackDetailsViewModel(track: Track.example())
+        return TrackDetailsViewModel(track: Track.example2())
     }
     
 }

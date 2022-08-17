@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftChartsAudioVisualizerApp: App {
     var body: some Scene {
         WindowGroup {
-            TrackDetailsView(viewModel: TrackDetailsViewModel.example())
+            TrackListView(tracks: [Track.example(), Track.example2()])
         }
     }
 }

@@ -11,8 +11,11 @@
 		1E6A74E928AAB3F400A8429E /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A74E828AAB3F400A8429E /* PlayerControlsView.swift */; };
 		1E6A74EB28AAB4ED00A8429E /* TrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A74EA28AAB4ED00A8429E /* TrackDetailsViewModel.swift */; };
 		1E6A74ED28AAB77500A8429E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A74EC28AAB77500A8429E /* Track.swift */; };
+		1E6A74EF28AAF3B300A8429E /* beethoven.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E6A74EE28AAF3B300A8429E /* beethoven.mp3 */; };
+		1E6A74F128AB6DED00A8429E /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A74F028AB6DED00A8429E /* TrackListView.swift */; };
+		1E6A74F328AD2B8200A8429E /* TrackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A74F228AD2B8200A8429E /* TrackRowView.swift */; };
 		1EA0795028A8EF25003BF63B /* AudioProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA0794F28A8EF25003BF63B /* AudioProcessing.swift */; };
-		1EA0795228A903EC003BF63B /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1EA0795128A903EC003BF63B /* music.mp3 */; };
+		1EA0795228A903EC003BF63B /* chopin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1EA0795128A903EC003BF63B /* chopin.mp3 */; };
 		1ED4BC9C28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BC9B28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift */; };
 		1ED4BC9E28A80F9800689911 /* TrackDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4BC9D28A80F9800689911 /* TrackDetailsView.swift */; };
 		1ED4BCA028A80F9A00689911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4BC9F28A80F9A00689911 /* Assets.xcassets */; };
@@ -44,8 +47,11 @@
 		1E6A74E828AAB3F400A8429E /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
 		1E6A74EA28AAB4ED00A8429E /* TrackDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewModel.swift; sourceTree = "<group>"; };
 		1E6A74EC28AAB77500A8429E /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		1E6A74EE28AAF3B300A8429E /* beethoven.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beethoven.mp3; sourceTree = "<group>"; };
+		1E6A74F028AB6DED00A8429E /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
+		1E6A74F228AD2B8200A8429E /* TrackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowView.swift; sourceTree = "<group>"; };
 		1EA0794F28A8EF25003BF63B /* AudioProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProcessing.swift; sourceTree = "<group>"; };
-		1EA0795128A903EC003BF63B /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		1EA0795128A903EC003BF63B /* chopin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chopin.mp3; sourceTree = "<group>"; };
 		1ED4BC9828A80F9800689911 /* SwiftChartsAudioVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftChartsAudioVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4BC9B28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftChartsAudioVisualizerApp.swift; sourceTree = "<group>"; };
 		1ED4BC9D28A80F9800689911 /* TrackDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsView.swift; sourceTree = "<group>"; };
@@ -107,13 +113,16 @@
 			isa = PBXGroup;
 			children = (
 				1ED4BC9B28A80F9800689911 /* SwiftChartsAudioVisualizerApp.swift */,
+				1E6A74F028AB6DED00A8429E /* TrackListView.swift */,
+				1E6A74F228AD2B8200A8429E /* TrackRowView.swift */,
 				1ED4BC9D28A80F9800689911 /* TrackDetailsView.swift */,
 				1E6A74EA28AAB4ED00A8429E /* TrackDetailsViewModel.swift */,
 				1E6A74E628AAB37300A8429E /* BackgroundPictureView.swift */,
 				1E6A74E828AAB3F400A8429E /* PlayerControlsView.swift */,
 				1EA0794F28A8EF25003BF63B /* AudioProcessing.swift */,
 				1E6A74EC28AAB77500A8429E /* Track.swift */,
-				1EA0795128A903EC003BF63B /* music.mp3 */,
+				1EA0795128A903EC003BF63B /* chopin.mp3 */,
+				1E6A74EE28AAF3B300A8429E /* beethoven.mp3 */,
 				1ED4BC9F28A80F9A00689911 /* Assets.xcassets */,
 				1ED4BCA128A80F9A00689911 /* Preview Content */,
 			);
@@ -251,7 +260,8 @@
 			files = (
 				1ED4BCA328A80F9A00689911 /* Preview Assets.xcassets in Resources */,
 				1ED4BCA028A80F9A00689911 /* Assets.xcassets in Resources */,
-				1EA0795228A903EC003BF63B /* music.mp3 in Resources */,
+				1EA0795228A903EC003BF63B /* chopin.mp3 in Resources */,
+				1E6A74EF28AAF3B300A8429E /* beethoven.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6A74F328AD2B8200A8429E /* TrackRowView.swift in Sources */,
 				1ED4BC9E28A80F9800689911 /* TrackDetailsView.swift in Sources */,
 				1E6A74E928AAB3F400A8429E /* PlayerControlsView.swift in Sources */,
+				1E6A74F128AB6DED00A8429E /* TrackListView.swift in Sources */,
 				1E6A74EB28AAB4ED00A8429E /* TrackDetailsViewModel.swift in Sources */,
 				1E6A74E728AAB37300A8429E /* BackgroundPictureView.swift in Sources */,
 				1EA0795028A8EF25003BF63B /* AudioProcessing.swift in Sources */,

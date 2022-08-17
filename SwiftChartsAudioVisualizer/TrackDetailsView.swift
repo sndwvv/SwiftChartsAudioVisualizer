@@ -71,7 +71,9 @@ struct TrackDetailsView: View {
         .background {
             BackgroundPictureView(imageUrl: viewModel.track.imageUrl)
         }
-        .preferredColorScheme(.dark)
+        .onDisappear {
+            viewModel.audioProcessing.player.stop()
+        }
     }
     
     func updateData(_: Date) {
